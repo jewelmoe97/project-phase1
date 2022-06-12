@@ -39,7 +39,7 @@ npm -v
 json server install
 npm i json-server
 json server run
-json-server --watch db.json list.json
+json-server --watch  list.json
 
 *open index.html in the browser
  
