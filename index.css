@@ -1,168 +1,141 @@
-@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
-:root {
-	--dark: #deb9f5;
-	--darker: #e99df2;
-	--darkest: #bf78d7;
-	--grey: #6B7280;
-	--pink: #EC4899;
-	--purple: #8B5CF6;
-	--light: rgb(250, 248, 248);
+*{
+    box-sizing: border-box;
 }
 
-* {
-	margin: 0;
-	box-sizing: border-box;
-	font-family: 'Permanent Marker', cursive;
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 50px 0px 0px 0px;
 }
 
-body {
-    font-family: 'Permanent Marker', cursive;
-	display: flex;
-	flex-direction: column;
-	min-height: 100vh;
-	color: rgb(6, 6, 6);
-	background-color: var(--light);
+.delete {
+  color: white;
+  user-select: none;
+  padding: 20px;
+  cursor: pointer;
+  background-color: red;
+  font-size: 20px;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  transition: all 1s;
+
 }
 
-header {
-    font-family: 'Permanent Marker', cursive;
-	padding: 2rem 1rem;
-	max-width: 800px;
-	width: 100%;
-	margin: 0 auto;
+
+.done{   
+        
+        margin: 0px 20px;
+        color: white;
+        user-select: none;
+        padding: 20px;
+        cursor: pointer;
+        background-color: blue;
+        font-size: 20px;
+        border: none;
+        outline: none;
+        border-radius: 10px;
+        transition: all 1s;
+      
+      
+      
 }
 
-header h1{ 
-    font-family: 'Permanent Marker', cursive;
-	font-size: 3rem;
-	font-weight: 290;
-	color: var(--green);
-	margin-bottom: 1rem;
+
+.underline{
+    text-decoration: line-through;
 }
 
-#new-task-form {
-	display: flex;;
+.underline:before,
+.underline:after {
+    content: "\00a0\00a0";
 }
 
-input, button {
-	appearance: none;
-	border: none;
-	outline: none;
-	background: none;
+
+
+.done:hover{
+    transform: translateX(-10px);
 }
 
-#new-task-input {
-    font-family: 'Permanent Marker', cursive;
-	flex: 1 1 0%;
-	background-color: var(--darker);
-	padding: 1rem;
-	border-radius: 1rem;
-	margin-right: 1rem;
-	color: var(--light);
-	font-size: 2rem;
+
+
+.delete:hover{
+    transform: translateY(-10px);
 }
 
-#new-task-input::placeholder {
-	color: var(--black);
+
+.red{
+    color: pink;
 }
 
-#new-task-submit {
-    font-family: 'Permanent Marker', cursive;
-	color: var(--pink);
-	font-size: 1.25rem;
-	font-weight: 700;
-	background-image: linear-gradient(to right, var(--pink), var(--purple));
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-	cursor: pointer;
-	transition: 0.4s;
+.p1 {
+  text-align: center;
 }
 
-#new-task-submit:hover {
-	opacity: 0.8;
+.ck {
+  width: 15px;
+  height: 15px;
 }
 
-#new-task-submit:active {
-	opacity: 0.6;
+input[type="text"] {
+  padding: 20px;
+  font-size: 20px;
+  width: 50vw;
+  outline: none;
+  border: none;
+  border-radius: 20px;
 }
 
-main {
-	flex: 1 1 0%;
-	max-width: 800px;
-	width: 100%;
-	margin: 0 auto;
+
+.add{
+    padding: 20px;
+    width: 15vw;
+    outline: none;
+    border: none;
+    border-radius: 50px;
+    font-size:20px;
+    transition: all 0.7s;
+    background-color: skyblue;
+
 }
 
-.task-list {
-	padding: 1.5rem;
+
+.add:hover{
+    background-color: pink;
+    color: black;
+    transform: scale(1.5);
 }
 
-.task-list h2 {
-    font-family: 'Permanent Marker', cursive;
-	font-size: 1.5rem;
-	font-weight: 290;
-	color: var(--black);
-	margin-bottom: 1rem;
+table,
+th,
+td {
+  border: 1px solid;
+  text-align: center;
+
 }
 
-#tasks .task {
-    font-family: 'Permanent Marker', cursive;
-	display: flex;
-	justify-content: space-between;
-	background-color: var(--darkest);
-	padding: 1rem;
-	border-radius: 1rem;
-	margin-bottom: 1rem;
+table {
+  width: 60%;
+  border-collapse: collapse;
+ 
 }
 
-.task .content {
-	flex: 1 1 0%;
+th {
+  font-size: 30px;
+  padding: 20px;
+  color: yellow;
+  
 }
 
-.task .content .text {
-    font-family: 'Permanent Marker', cursive;
-	color: var(--dark);
-	font-size: 1.125rem;
-	width: 100%;
-	display: block;
-	transition: 0.4s;
+td {
+  font-size: 20px;
+  padding: 20px;
+  color: #00FF00;
 }
 
-.task .content .text:not(:read-only) {
-	color: var(--pink);
-}
-
-.task .actions {
-	display: flex;
-	margin: 0 -0.5rem;
-}
-
-.task .actions button {
-	cursor: pointer;
-	margin: 0 0.5rem;
-	font-size: 1.125rem;
-	font-weight: 700;
-	text-transform: uppercase;
-	transition: 0.4s;
-}
-
-.task .actions button:hover {
-	opacity: 0.8;
-}
-
-.task .actions button:active {
-    font-family: 'Permanent Marker', cursive;
-	opacity: 0.6;
-}
-
-.task .actions .edit {
-    font-family: 'Permanent Marker', cursive;
-	background-image: linear-gradient(to right, var(--pink), var(--purple));
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-}
-
-.task .actions .delete {
-    font-family: 'Permanent Marker', cursive;
-	color: rgb(12, 12, 12);
+body{
+    background-color: black;
 }
