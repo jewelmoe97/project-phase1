@@ -7,11 +7,19 @@ This is a website that makes your life easy, since you can list them and once yo
 
 
 ### Features:
-User-friendly
-type a task into the input field
-click some form of a add list button
-see the task string that u provided appear in the DOM after the add list button has been activated
-Responsive, on all devices
+*User-friendly
+
+*type a task into the input field
+
+*click some form of a add list button
+
+*see the task string that u provided appear in the DOM after the add list button has been activated
+
+*underline the task u have done by clicking Done button
+
+*delete the task that no longer wanted by clicking Delete button
+
+*Responsive, on all devices
 
 
 
